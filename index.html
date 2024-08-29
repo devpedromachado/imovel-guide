@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.7/dist/html2canvas.min.js"></script>
+    <script src="index.js"></script>
+    <title>Imovel Guide</title>
+</head>
+
+<body>
+    <main>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="/images/logo.png" class="logo"/>
+                <div class="menu-toggle" id="menu-toggle">
+                    &#9776; 
+                </div>
+            </div>
+            <div class="nav1">
+                <a href="">Condomínios</a>
+                <a href="">Fórum</a>
+                <a href="">Guia</a>
+                <a href="">Artigos</a>
+                <a href="">Ferramentas</a>
+            </div>
+            <div class="nav2">
+                <a href="">Cotar imóvel</a>
+                <a href="">Planos</a>
+                <a href="">Entrar</a>
+                <button class="signup-btn">Cadastre-se</button>
+            </div>
+        </nav>
+
+        <div class="container-conteudo">
+
+            <div class="card-corretor">
+                <div class="corretor1">
+                    <div>
+                        <img src="/images/corretor.jpg" class="foto-corretor">
+                    </div>
+                    <div>
+                        <h4>Fernando Castro</h4>
+                        <p>1200 pontos</p>
+                        <p class="ver-telefone" id="ver-telefone" onclick="verTelefone(this)">Ver telefone</p>
+                    </div>
+
+                </div>
+                <div class="corretor2">
+                    <div>
+                        <img src="/images/corretora.jpg" class="foto-corretor">
+                    </div>
+                    <div>
+                        <h4>Luciana Rocha</h4>
+                        <p>3000 pontos</p>
+                        <p class="ver-telefone" id="ver-telefone" onclick="verTelefone(this)">Ver telefone</p>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="mensagem">
+                <h3>Mande uma mensagem</h3>
+                <div class="cpf-campo">
+                    <label for="cpf">CPF: </label>
+                    <input class="number-input" name="cpf" id="cpf" oninput="mascaraCpf(this)" placeholder="Digite seu CPF"/>
+                </div>
+                
+                <div class="telefone-campo">
+                    <label for="telefone">Telefone: </label>
+                    <input class="number-input" name="telefone" id="telefone" oninput="mascaraTelefone(this)" 
+                    placeholder="Digite seu telefone:"/>
+                </div>
+
+                <div>
+                    <label for="mensagem">Mensagem: </label>
+                    <input class="mensagem-input" name="mensagem" type="text" placeholder="Digite sua mensagem"/>
+                </div>    
+                <button class="enviarMensagem" onclick="enviarMensagem()">Enviar Mensagem</button>
+            </div>
+
+            <div class="regra-tres">
+                <h3>Regra de três</h3>
+                <input class="regra-campo" type="number" id="num1" placeholder="numero"/>
+                <input class="regra-campo" type="number" id="num2" placeholder="numero"/>
+                <input class="regra-campo" type="number" id="num3" placeholder="numero"/>
+                <input class="resultado-campo" type="number" id="resultado" placeholder="resultado" disabled/>
+
+                <button class="calcular-btn" onclick="calcular()">Calcular</button>
+            </div>
+
+            <div class="modal-container">
+                <img id="imagem" src="/images/casa.jpg" alt="Casa" style="width:200px;cursor:pointer" onclick="abrirModal(this.src)">
+            
+                <div id="modal" class="modal">
+                    <span class="fechar" onclick="fecharModal()">&times;</span>
+                    <img class="modal-conteudo" id="imgModal">
+                </div>
+                <button class="calcular-btn" onclick="abrirModal('/images/casa.jpg')">Abrir imagem no modal</button>
+            </div>
+                
+            <div class="canvas">
+                <img id="imagem-canvas" src="/images/casa.jpg" alt="Casa" style="width:200px;cursor:pointer">
+            
+                <div class="modal">
+                    <span class="fechar"">&times;</span>
+                    <img class="modal-conteudo" id="imagem-download">
+                </div>
+                <button class="calcular-btn" id="download-btn">Download</button>
+            </div>
+
+            <div class="zoom">
+                <img src="images/casa.jpg" class="imagem-zoom">
+            </div>
+        </div>
+
+        <footer class="footer">
+            
+            <div class="footer1">
+                <a href="">Termos</a>
+                <a href="">Contatos</a>
+                <a href="">Sobre</a>
+            </div>
+            <div class="footer2">
+                <h5>Copyrigth 2022. Todos os direitos reservados.</h5>
+                <img src="/images/logo.png" class="logo"/>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>

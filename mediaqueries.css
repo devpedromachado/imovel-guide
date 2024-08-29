@@ -1,0 +1,91 @@
+@media (max-width: 768px) {
+    .container-conteudo {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .signup-btn, .enviarMensagem, .calcular-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .mensagem-input {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nav1, .nav2 {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: #1B2653;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        align-items: center;
+    }
+
+    .nav1.active, .nav2.active {
+        display: flex;
+    }
+
+    .nav1 a, .nav2 a {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+        font-size: 10px;
+    }
+
+    .logo {
+        max-width: 40px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .signup-btn, .enviarMensagem, .calcular-btn {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .mensagem-input {
+        width: 100%;
+    }
+
+    .foto-corretor {
+        max-width: 100px;
+    }
+
+    .ver-telefone {
+        font-size: 10px;
+    }
+}
